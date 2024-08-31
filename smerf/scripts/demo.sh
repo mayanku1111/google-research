@@ -23,7 +23,5 @@ CHECKPOINT_DIR="$(pwd)/checkpoints/${TIMESTAMP}-demo"
 python3 -m smerf.train \
   --gin_configs=configs/models/smerf.gin \
   --gin_configs=configs/mipnerf360/bicycle.gin \
-  --gin_configs=configs/mipnerf360/extras.gin \
-  --gin_configs=configs/mipnerf360/rtx3080ti.gin \
   --gin_bindings="smerf.internal.configs.Config.checkpoint_dir = '${CHECKPOINT_DIR}'" \
   --alsologtostderr
